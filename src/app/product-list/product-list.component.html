@@ -1,0 +1,21 @@
+
+<div id="container">
+<h2>PRODUCTS</h2>
+
+<div *ngFor="let product of product">
+    <h3>
+        <a [title]="product.name + ' details'"
+        [routerLink]="['/products',product.id]">
+        {{ product.name }}
+        </a>
+    </h3>
+    <p *ngIf="product.description">
+        Description: {{ product.description }}
+      </p>
+    
+      <button type="button" (click)="share()">
+        Share
+      </button>
+    
+</div>
+</div> 
